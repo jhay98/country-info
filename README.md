@@ -46,3 +46,5 @@ and open your browser on
     http://localhost:4200
 
 to run the application.
+
+Search for a country using the top search bar. A list of countries will be provided on the left panel. Select a country from the left panel for further information about the country.
