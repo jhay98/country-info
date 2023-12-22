@@ -1,0 +1,16 @@
+<div class="container">
+    <mat-progress-bar *ngIf="loaderService.isLoading | async" mode="indeterminate"></mat-progress-bar>
+    <mat-progress-bar *ngIf="!(loaderService.isLoading | async)" mode="determinate" value="0"></mat-progress-bar>
+    <div class="top-element">
+        <app-search (resultsFoundEvent)="onResultsFound($event)" ></app-search>
+    </div>
+    <div class="main-content">
+    <div class="left-element">
+        <app-country-list [countries]="countries" (countrySelectedEvent)="onCountrySelected($event)"></app-country-list>
+    </div>
+    <div class="right-element">
+        <app-country-detail [country]="countryInfo"></app-country-detail>
+    </div>
+</div>
+</div>
+  

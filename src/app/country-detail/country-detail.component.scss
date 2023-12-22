@@ -1,0 +1,46 @@
+.blur-background {
+  width: 100%; 
+  height: 100%;
+  background-size: contain; // contain
+  background-position: center;
+  position: relative;
+  overflow: hidden;
+  background-repeat: no-repeat;
+  isolation: isolate;
+  display: grid;
+  font-family: 'Arial Black', Gadget, sans-serif;
+}
+
+.blur-background::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  opacity: 0.7;
+  inset: 0;
+  background: white;
+}
+  
+.detail-content {
+  margin: 1cm;
+}
+
+h2 {
+  font-size: 4rem;
+  font-weight: 900;
+  margin-bottom: 1rem;
+  color:black
+}
+
+h3 {
+  font-size: 2rem;
+  font-weight: 900;
+  margin-bottom: 1rem;
+  color:black
+}
+
+h4 {
+  font-size: 1.5rem;
+  font-weight: 900;
+  margin-bottom: 1rem;
+  color:black
+}

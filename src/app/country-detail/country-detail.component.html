@@ -1,0 +1,24 @@
+<div *ngIf="country" class="blur-background" [style.background-image]="'url(' + country.coatOfArms.png + ')'" [ngStyle]="{ 'background-image': 'url(' + country.coatOfArms.png + ')'}">
+    <div *ngIf="country" class="detail-content">
+
+        <h2>{{country.name.common}}</h2>
+        <h3 *ngIf="country.name.official && country.name.common !== country.name.official" >({{country.name.official}})</h3>
+
+        <h4>Region:</h4>
+        <p>{{country.region}} ({{country.subregion}})</p>
+        <h4>Capital cities:</h4>
+        <ul>
+            <li *ngFor="let capital of country.capital">{{capital}}</li>
+        </ul>
+    
+        <h4>Languages:</h4>
+        <ul>
+            <li *ngFor="let language of country.languages | keyvalue">{{language.value}}</li>
+        </ul>
+    
+        <h4>Population:</h4>
+        <p>{{country.population}}</p>
+    </div>
+
+</div>
+ 
